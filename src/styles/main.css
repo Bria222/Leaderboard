@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 20px;
+  font-size: 2.8rem;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.wrapper {
+  margin: 20px 60px;
+  display: flex;
+  gap: 60px;
+}
+
+.nav-score {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-left: 20px;
+}
+
+.nav-score > button {
+  border: 2px solid black;
+  padding: 2px;
+  width: 30%;
+  height: 4%;
+  background-color: #fff;
+  box-shadow: 2px 3px black;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.score-container {
+  border: 2px solid black;
+  margin: 4px;
+  padding: 5px;
+  width: 20em;
+}
+
+.score-container > p:nth-child(odd) {
+  background-color: lightgray;
+  padding: 3px;
+}
+
+.score-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.score-fields > input {
+  border: 3px solid black;
+  padding: 5px;
+}
+
+.score-fields > button {
+  width: 50%;
+  align-self: flex-end;
+  border: 2px solid black;
+  padding: 5px;
+  box-shadow: 2px 3px black;
+  font-weight: 600;
+  cursor: pointer;
+}

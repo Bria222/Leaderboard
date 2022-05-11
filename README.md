@@ -23,7 +23,7 @@ To run the above project you need to meet the following requirements:
 > To run the above project :
 > Run the following commands on your terminal of choice
 
-- git clone <url>
+- git clone <https://github.com/Bria222/Leaderboard>
 - cd /dir
 - npm install
 - npm run dev - to spin up local webpack server
