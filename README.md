@@ -37,3 +37,7 @@ To run the above project you need to meet the following requirements:
 - Twitter: https://twitter.com/briannyachae9
   
 ##  Give a ⭐ to show some 🤟
+
+## 📝 License
+
+This project is [MIT](LICENSE) licensed.
