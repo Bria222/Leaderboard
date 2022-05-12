@@ -1,73 +1,105 @@
+*,
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  font-family: sans-serif;
 }
 
-h1 {
-  margin: 20px;
-  font-size: 2.8rem;
-}
-
-.container {
-  width: 90%;
-  margin: 0 auto;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-.wrapper {
-  margin: 20px 60px;
+.main-container {
+  width: 100%;
   display: flex;
-  gap: 60px;
-}
-
-.nav-score {
-  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 20px;
-  margin-left: 20px;
+  margin-bottom: 4rem;
 }
 
-.nav-score > button {
-  border: 2px solid black;
-  padding: 2px;
-  width: 30%;
-  height: 4%;
-  background-color: #fff;
-  box-shadow: 2px 3px black;
-  font-weight: 600;
-  cursor: pointer;
+.main-container h1 {
+  width: 80%;
+  padding: 50px 0 50px 0;
+  font-size: 40px;
+  font-weight: 700;
 }
 
 .score-container {
-  border: 2px solid black;
-  margin: 4px;
-  padding: 5px;
-  width: 20em;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  gap: 5%;
 }
 
-.score-container > p:nth-child(odd) {
-  background-color: lightgray;
-  padding: 3px;
+.recent-score-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 10px;
 }
 
-.score-fields {
+h2 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+button,
+input[type="submit"] {
+  outline: none;
+  border: 1px solid black;
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 5px 20px;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px black;
+  height: 31px;
+}
+
+.recent-score {
+  width: 50%;
+  border: 1px solid black;
+  max-height: 400px;
+  overflow: auto;
+}
+
+.recent-score li {
+  padding: 10px;
+  list-style: none;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.list-gray {
+  background-color: grey;
+}
+
+.list-white {
+  background-color: whitesmoke;
+}
+
+.add-new-score {
+  width: 50%;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  padding: 20px 10px;
+  gap: 30px;
 }
 
-.score-fields > input {
-  border: 3px solid black;
-  padding: 5px;
+.add-new-score h2 {
+  width: calc(100% - 30px);
 }
 
-.score-fields > button {
-  width: 50%;
-  align-self: flex-end;
-  border: 2px solid black;
-  padding: 5px;
-  box-shadow: 2px 3px black;
+.add-new-score input {
+  outline: none;
+  padding: 5px 20px;
+  border: 1px solid black;
+  background-color: transparent;
+  font-size: 14px;
   font-weight: 600;
-  cursor: pointer;
+  width: calc(100% - 40px);
+}
+
+.add-new-score input::placeholder {
+  color: black;
+}
+
+.add-new-score input:last-child {
+  width: 100px;
+  margin-left: auto;
 }
