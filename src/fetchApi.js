@@ -1,14 +1,44 @@
-const apiUrl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/llFawVoYD7zLAfvY9jQn/scores/';
+class Score {
+  constructor(user, score) {
+    this.user = user;
+    this.score = score;
+  }
 
-const postApi = (score) => {
-  const scoreResult = fetch(apiUrl, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json; charset=UTF-8',
-    },
-    body: JSON.stringify(score),
-  });
-  return scoreResult.json;
-};
+  scoreData = [];
 
-export default postApi;
+  baseUrl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/:id/scores/';
+
+  getScore = () => {
+    const recentScore = document.querySelector('.recent-score-group');
+    recentScore.innerHTML = this.scoreData.map((element, index) => `<li class=${index % 2 !== 0 ? 'list-gray' : 'list-white'}>${element.user} : ${element.score}</li>`).join('');
+  }
+
+  fetchScore = async () => {
+    try {
+      const data = await fetch(this.baseUrl);
+      const res = await data.json();
+      res.result.map((item) => this.scoreData.push(item));
+      return this.getScore();
+    } catch (err) { return err; }
+  };
+
+  addScore=async ({ user, scoreNum }) => {
+    try {
+      const config = {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ user, score: scoreNum }),
+      };
+
+      const data = await fetch(this.baseUrl, config);
+      const res = await data.json();
+      this.scoreData.push(res);
+      return this.fetchScore();
+    } catch (err) { return err; }
+  }
+}
+
+export default Score;
