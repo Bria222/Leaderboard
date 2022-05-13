@@ -2,8 +2,7 @@
 > Leaderboard Api project
 
 
-![Screenshot (226)](https://user-images.githubusercontent.com/64264883/168067381-0f39c54a-f603-4337-bc23-0cc08dbdf792.png)
-
+![Screenshot (227)](https://user-images.githubusercontent.com/64264883/168248784-4ed0d753-2692-4f64-b148-386bf4964b2c.png
 
 
 
