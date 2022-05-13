@@ -46,4 +46,5 @@ To run the above project you need to meet the following requirements:
 
 ## 📝 License
 
+This project is
 This project is [MIT](LICENSE) licensed.
